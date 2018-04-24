@@ -12,7 +12,7 @@ User provides as arguments:
 
 To run the script download the .sh file
 <pre>
-wget https://raw.githubusercontent.com/milospjanic/PolygenicScoreCAD/master/PolygenicScoreCAD.sh
+wget https://github.com/milospjanic/PolygenicScoreCAD/blob/master/PolygenicScoreCAD.sh
 chmod 755 PolygenicScoreCAD.sh
 </pre>
 
