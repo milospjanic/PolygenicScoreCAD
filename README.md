@@ -1,6 +1,6 @@
 # PolygenicScoreCAD
 
-PolygenicScoreCAD for CAD (coronary artery disease) is a combined bash/awk/R script for testing causality of a gene for a given trait, in this case CAD, given the directionality of change of expression level with the increasing number of global risk GWAS allels. Script uses CAD GWAS data from the most recent meta analysis (Nelson et al. Association analyses based on false discovery rate implicate new loci for coronary artery disease. Nat Genet 2017. doi: 10.1038/ng.3913) to select risk SNPs and define risk alleles and HCASMC eQTL data to perform regression analysis.
+PolygenicScoreCAD for coronary artery disease (CAD) is a combined bash/awk/R script for testing causality of a gene for a given trait, in this case CAD, given the directionality of change of gene expression level with the increasing number of global risk GWAS allels. Script uses CAD GWAS data from the most recent meta analysis (Nelson et al. Association analyses based on false discovery rate implicate new loci for coronary artery disease. Nat Genet 2017. doi: 10.1038/ng.3913) to select risk SNPs genome-wide and define risk alleles and HCASMC eQTL data to perform regression analysis.
 
 User provides as arguments:
 
