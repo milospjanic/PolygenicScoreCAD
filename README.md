@@ -44,15 +44,15 @@ In the HCASMC_expr folder, file **TABLE.RPM.txt** contains per-gene RNAseq read 
          0 1 0 0 0 1 0 0 0 2 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 0 0 0 0 0 0 0 2 0 2 0 1 1 0 1 1 1 2 0 1 0 0 0 0 1 0 0
 </pre>
 
-Running the script. Place gene name in a file gene.txt, and provide gene.txt, chromosome, distance and p-value threshold as arguments:
+Running the script. Place gene name in a file gene.txt, and provide gene.txt, chromosome, and p-value threshold as arguments:
 
 <pre>
-./GeneCausalityTestCAD.sh gene.txt 11 100000 0.00001
+./PolygenicScoreCAD.sh gene.txt 11 0.00001
 </pre>
 
 # Dependences
 
-UniqueHaplotypeTestCAD requires biomaRt installed in R. In case the biomaRt repository is down run this command to substitute the repository URL with the archive version of biomaRt:
+PolygenicScoreCAD requires biomaRt installed in R. In case the biomaRt repository is down run this command to substitute the repository URL with the archive version of biomaRt:
 
 <pre>
 sed -i 's/grch37.ensembl.org/jul2016.archive.ensembl.org/g' UniqueHaplotypeTestCAD.sh
