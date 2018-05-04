@@ -60,7 +60,7 @@ sed -i 's/grch37.ensembl.org/jul2016.archive.ensembl.org/g' UniqueHaplotypeTestC
 
 # Examples
 
-An example includes CAD GWAS gene TCF21 that is causal and shows a negative correlation with the trait, ie. with the increased number of risk SNPs its expression decreases:
+An example includes CAD GWAS gene TCF21 that is causal and shows a negative correlation with the trait, ie. with the increased number of genome-wide risk SNPs its expression decreases:
 
 ![alt text](https://github.com/milospjanic/PolygenicScoreCAD/blob/master/tcf21.png)
 
