@@ -18,7 +18,7 @@ chmod 755 PolygenicScoreCAD.sh
 
 Place the script in your home or any other folder. The script will create ~/CADcausalitytest as its working folder, and three subfolders: CARDIOGRAMC4D, HCASMC_expr and HCASMC_genotypes. HCASMC_expr will contain per-gene RNAseq read counts for each HCASMC sample, while HCASMC_genotypes/vcf/ contains whole genome sequencing vcf files of HCASMC samples. CARDIOGRAMC4D folder will contain summary data from Nelson et al. Script will check if all three folders and data sets are present and if not download.
 
-In the folder CARDIOGRAMC4D, file **chrN.GENE.region.txt** will contain all the SNPs from Nelson et al. in the selected region from the tested gene. File **SNP_effect.alele_pval.threshold.txt** will contain SNPs selected with a p-value threshold:
+In the folder CARDIOGRAMC4D, file **SNP_effect.alele_pval.threshold.txt** will contain genome-wide SNPs selected with a p-value threshold:
 
 <pre>
 rs7483886	G	2.13e-06
