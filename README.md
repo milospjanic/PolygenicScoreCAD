@@ -60,16 +60,9 @@ sed -i 's/grch37.ensembl.org/jul2016.archive.ensembl.org/g' UniqueHaplotypeTestC
 
 # Examples
 
-If gene is not causal for the trait (CAD) it will not show correlation with the increased number of risk SNPs:
+An example includes CAD GWAS gene TCF21 that is causal and shows a negative correlation with the trait, ie. with the increased number of risk SNPs its expression decreases:
 
-![alt text](https://github.com/milospjanic/GeneCausalityTestCAD/blob/master/test24.png)
+![alt text](https://github.com/milospjanic/PolygenicScoreCAD/blob/master/tcf21.png)
 
-If a gene is causal for the trait and it's increased expression is positively corelated with the trait there should be a positive correlation on the graph:
-
-![alt text](https://github.com/milospjanic/GeneCausalityTestCAD/blob/master/test28.png)
-
-On the other hand, gene might be causal and showing negative correlation with the trait:
-
-![alt text](https://github.com/milospjanic/GeneCausalityTestCAD/blob/master/test29.png)
 
 
