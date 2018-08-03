@@ -27,9 +27,8 @@ cd $CC4D
 
 if [ ! -f $NELSON ]
 then
-wget https://www.dropbox.com/s/hjmkk5rjj0tfswy/UKBB.GWAS1KG.EXOME.CAD.SOFT.META.PublicRelease.300517.txt?dl=0
-echo "Unpacking CARDIOGRAM plus C4D data, Nelson et al."
-unzip ...
+wget https://www.dropbox.com/s/hjmkk5rjj0tfswy/UKBB.GWAS1KG.EXOME.CAD.SOFT.META.PublicRelease.300517.txt
+echo "Downloaded CARDIOGRAM plus C4D data, Nelson et al."
 fi
 
 echo "Selecting p-value threshold" $TRESHOLD
