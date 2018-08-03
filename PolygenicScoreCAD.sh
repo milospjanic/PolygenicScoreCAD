@@ -192,7 +192,10 @@ cd $VCF
 echo "#!/usr/bin/Rscript
 library(\"ggplot2\")
 data<-read.table (file=\"GENOTYPES.combined.even.HEADER\", head=T, check.names=F)
-data<-rbind(data, Total = colSums(data))
+data<-rbind(data, colSums(data))
+
+rownames(data)[length(rownames(data))]<-\"Total\"
+rownames(data) <- make.names( paste(\"NAME\", rownames(data)) , unique = TRUE)
 
 data.tr<-t(data)
 #data.sum<-rowSums(data.tr)
@@ -202,14 +205,14 @@ data.merge<-merge(x = data.tr, y = expr, by = \"row.names\", all = F)
 
 write.table(file=\"data.merge.table.txt\", data.merge)
 pdf(\"output.pdf\")
-ggplot(data.merge, aes(Total, V2, color = Total)) +
+ggplot(data.merge, aes(NAME.Total, V2, color = NAME.Total)) +
   geom_point(shape = 16, size = 5, show.legend = FALSE, alpha = .4) +
   theme_minimal() +
   scale_color_gradient(low = \"#0091ff\", high = \"#f0650e\") +
   theme(axis.text=element_text(size=24),axis.title=element_text(size=26))+ labs(title = \"$GENENAME Causality Test\", x=\"CAD Risk SNPs Total\", y=\"$GENENAME expression\") + theme(plot.title = element_text(size = rel(2)))+
   geom_smooth(method=lm)+
   scale_y_continuous(expand = c(0, 0), limits = c(0, max(data.merge\$V2)+max(data.merge\$V2)/5))+
-  annotate(x=min(data.merge\$Total)+(max(data.merge\$Total)-min(data.merge\$Total))/5, y=max(data.merge\$V2)+(max(data.merge\$V2)-min(data.merge\$V2))/6,label=paste(\"R = \", round(cor (data.merge\$V2,data.merge\$Total),2)),geom=\"text\", size=8, col=\"darkred\")
+  annotate(x=min(data.merge\$NAME.Total)+(max(data.merge\$NAME.Total)-min(data.merge\$NAME.Total))/5, y=max(data.merge\$V2)+(max(data.merge\$V2)-min(data.merge\$V2))/6,label=paste(\"R = \", round(cor (data.merge\$V2,data.merge\$NAME.Total),2)),geom=\"text\", size=8, col=\"darkred\")
 
 dev.off()
 "> script.R
